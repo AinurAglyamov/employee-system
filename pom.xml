@@ -96,6 +96,14 @@
             <version>2.9.0</version>
         </dependency>
 
+        <!-- https://mvnrepository.com/artifact/org.springframework/spring-jdbc -->
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-jdbc</artifactId>
+            <version>4.3.4.RELEASE</version>
+        </dependency>
+
+
     </dependencies>
     <build>
         <plugins>
@@ -116,6 +124,13 @@
                         <port>8889</port>
                     </httpConnector>
                 </configuration>
+                <dependencies>
+                    <dependency>
+                        <groupId>org.eclipse.jetty</groupId>
+                        <artifactId>jetty-io</artifactId>
+                        <version>${jetty.version}</version>
+                    </dependency>
+                </dependencies>
             </plugin>
 
         </plugins>
